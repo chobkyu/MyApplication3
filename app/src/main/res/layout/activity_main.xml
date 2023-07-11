@@ -8,38 +8,49 @@
     android:orientation="vertical"
     android:gravity="center">
 
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="hello android"-->
-<!--        android:textStyle = "bold" />-->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hello android"
+        android:textStyle = "bold" />
 
-<!--    <Button-->
-<!--        android:id="@+id/visibleButton"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="visible"-->
-<!--        />-->
+    <Button
+        android:id="@+id/visibleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="visible"
+        />
 
-<!--    <ImageView-->
-<!--        android:id="@+id/logoImageView"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:src = "@drawable/main"-->
+    <ImageView
+        android:id="@+id/logoImageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src = "@drawable/main"
+        android:background = "@android:color/holo_red_light"
+        android:maxWidth = "100dp"
+        android:maxHeight = "100dp"
+        android:adjustViewBounds="true"
+    />
 
-<!--    />-->
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:src = "@drawable/main"
+        android:scaleType="centerInside"
 
-<!--    <Button-->
-<!--        android:id="@+id/invisibleButton"-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="invisible" />-->
+        />
 
-<!--    <TextView-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:text="please i want to app developer"-->
-<!--        />-->
+    <Button
+        android:id="@+id/invisibleButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="invisible" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="please i want to app developer"
+        />
 
 
     <TextView
