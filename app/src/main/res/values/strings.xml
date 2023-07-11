@@ -1,3 +1,20 @@
 <resources>
     <string name="app_name">My Application</string>
+    <string name="edge_runner">
+        웹페이지 : https://github.com/chobkyu, 전화번호 : 010-9230-9536 , 이메일 : qudqud97@naver.com
+    </string>
+    <string name="info">
+        [layoutXML 87a92dc] 기초속성
+         2 files changed, 32 insertions(+)
+
+        C:\Users\USER2022\AndroidStudioProjects\MyApplication3>git push origin layoutXML
+        Enumerating objects: 25, done.
+        Counting objects: 100% (25/25), done.
+        Delta compression using up to 12 threads
+        Compressing objects: 100% (9/9), done.
+        Writing objects: 100% (13/13), 1.53 KiB | 1.53 MiB/s, done.
+        Total 13 (delta 4), reused 0 (delta 0), pack-reused 0
+        remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
+
+    </string>
 </resources>
