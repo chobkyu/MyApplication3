@@ -13,25 +13,11 @@ import androidx.core.content.ContextCompat
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var visibleButton :Button  //lateinit 프로퍼티를 null 허용으로 선언하지 않고 프로퍼티 초기화를 미루는 늦은 초기화
-    lateinit var invisibleButton : Button
-    lateinit var logoImageView : ImageView
-
-    override fun onCreate(savedInstanceState: Bundle?) {
+     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        visibleButton = findViewById(R.id.visibleButton)
-        invisibleButton = findViewById(R.id.invisibleButton)
-        logoImageView = findViewById(R.id.logoImageView)
 
-        visibleButton.setOnClickListener{
-            logoImageView.visibility = View.VISIBLE
-        }
-
-        invisibleButton.setOnClickListener{
-            logoImageView.visibility = View.INVISIBLE
-        }
 
     }
 }

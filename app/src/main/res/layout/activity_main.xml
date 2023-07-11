@@ -5,113 +5,138 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical"
-    android:gravity="center">
+    android:orientation="horizontal"
+    android:padding="16dp">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="hello android"
-        android:textStyle = "bold" />
 
-    <Button
-        android:id="@+id/visibleButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="visible"
-        />
-
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="button"
-        />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="check1"
-        />
-
-    <CheckBox
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="check2"
-        />
-
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="radio1"
-            />
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="radio2"
-            />
-    </RadioGroup>
-
-    <EditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="phone number"
-        android:inputType="phone"
-        />
 
     <ImageView
         android:id="@+id/logoImageView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src = "@drawable/main"
-        android:background = "@android:color/holo_red_light"
-        android:maxWidth = "100dp"
-        android:maxHeight = "100dp"
+        android:maxWidth = "50dp"
+        android:maxHeight = "50dp"
         android:adjustViewBounds="true"
-    />
+        />
 
-<!--    <ImageView-->
-<!--        android:layout_width="300dp"-->
-<!--        android:layout_height="300dp"-->
-<!--        android:src = "@drawable/main"-->
-<!--        android:scaleType="centerInside"-->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_marginLeft="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="hello android"
+            android:textStyle = "bold"
+            android:textSize="15dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="안드로이드 개발을 해보자"
+           />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="10월 8일"
+       />
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="hello android"-->
+<!--        android:textStyle = "bold" />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/visibleButton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="visible"-->
+<!--        />-->
+
+<!--    <Button-->
+<!--        android:id="@+id/button1"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="button"-->
+<!--        />-->
+
+<!--    <CheckBox-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="check1"-->
+<!--        />-->
+
+<!--    <CheckBox-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="check2"-->
+<!--        />-->
+
+<!--    <RadioGroup-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content">-->
+<!--        <RadioButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="radio1"-->
+<!--            />-->
+<!--        <RadioButton-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="radio2"-->
+<!--            />-->
+<!--    </RadioGroup>-->
+
+<!--    <EditText-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:hint="phone number"-->
+<!--        android:inputType="phone"-->
+<!--        />-->
+
+
+
+
+<!--    <Button-->
+<!--        android:id="@+id/invisibleButton"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="invisible" />-->
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="please i want to be app developer"-->
+<!--        />-->
+
+
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/edge_runner"-->
+<!--        android:autoLink="web|email|phone"-->
+<!--        android:textColor= "#FF0000"-->
+<!--        android:textSize= "20sp"-->
+<!--        android:textStyle= "bold"-->
 
 <!--        />-->
 
-    <Button
-        android:id="@+id/invisibleButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="invisible" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="please i want to be app developer"
-        />
-
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/edge_runner"
-        android:autoLink="web|email|phone"
-        android:textColor= "#FF0000"
-        android:textSize= "20sp"
-        android:textStyle= "bold"
-
-        />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="@string/info"
-        android:maxLines ="3"
-        android:ellipsize ="end"
-        android:layout_marginTop = "20dp"
-        />
+<!--    <TextView-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="@string/info"-->
+<!--        android:maxLines ="3"-->
+<!--        android:ellipsize ="end"-->
+<!--        android:layout_marginTop = "20dp"-->
+<!--        />-->
 
 </LinearLayout>
