@@ -3,6 +3,7 @@ package com.example.myapplication
 import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.os.SystemClock
 import android.view.Gravity
 import android.view.KeyEvent
 import android.view.MotionEvent
@@ -14,9 +15,11 @@ import androidx.core.content.ContextCompat
 class MainActivity : AppCompatActivity() {
     lateinit var resultView: TextView;
     var initTime = 0L //3초 이내 백버튼을 두번 누르면 종료하기 위해
-
-
-
+    var pauseTime = 0L;
+    lateinit var startButton: Button;
+    lateinit var stopButton: Button;
+    lateinit var resetButton: Button;
+    lateinit var chronometer: Chronometer;
 
      override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -25,6 +28,38 @@ class MainActivity : AppCompatActivity() {
 
 
         resultView = findViewById(R.id.resultView);
+
+        startButton = findViewById(R.id.startButton);
+        stopButton = findViewById(R.id.stopButton);
+        resetButton = findViewById(R.id.resetButton);
+        chronometer = findViewById(R.id.chronometer);
+
+
+        startButton.setOnClickListener {
+            chronometer.base = SystemClock.elapsedRealtime() + pauseTime
+            chronometer.start();
+            stopButton.isEnabled = true;
+            resetButton.isEnabled = true;
+            startButton.isEnabled = false;
+        }
+
+        stopButton.setOnClickListener {
+            pauseTime = chronometer.base - SystemClock.elapsedRealtime()
+            chronometer.stop();
+            stopButton.isEnabled = false;
+            resetButton.isEnabled = true;
+            startButton.isEnabled = true;
+        }
+
+        resetButton.setOnClickListener {
+            pauseTime = 0L;
+            chronometer.base = SystemClock.elapsedRealtime();
+            chronometer.stop();
+
+            stopButton.isEnabled = false;
+            resetButton.isEnabled = false;
+            startButton.isEnabled = true;
+        }
 
 //        val tab1 = findViewById<Button>(R.id.tab1);
 //        val tab2 = findViewById<Button>(R.id.tab2);
