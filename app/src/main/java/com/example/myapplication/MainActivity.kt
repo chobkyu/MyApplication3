@@ -9,30 +9,28 @@ import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.widget.Button
 import android.widget.ImageView
 import android.widget.LinearLayout
+import android.widget.TextView
 import androidx.core.content.ContextCompat
 
 class MainActivity : AppCompatActivity() {
 
-    lateinit var visibleButton :Button  //lateinit 프로퍼티를 null 허용으로 선언하지 않고 프로퍼티 초기화를 미루는 늦은 초기화
-    lateinit var invisibleButton : Button
-    lateinit var logoImageView : ImageView
-
-    override fun onCreate(savedInstanceState: Bundle?) {
+     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        visibleButton = findViewById(R.id.visibleButton)
-        invisibleButton = findViewById(R.id.invisibleButton)
-        logoImageView = findViewById(R.id.logoImageView)
-
-        visibleButton.setOnClickListener{
-            logoImageView.visibility = View.VISIBLE
-        }
-
-        invisibleButton.setOnClickListener{
-            logoImageView.visibility = View.INVISIBLE
-        }
-
+//        val tab1 = findViewById<Button>(R.id.tab1);
+//        val tab2 = findViewById<Button>(R.id.tab2);
+//        val content1 = findViewById<TextView>(R.id.content1);
+//        val content2 = findViewById<TextView>(R.id.content2);
+//        tab1.setOnClickListener {
+//             content1.visibility = View.VISIBLE;
+//             content2.visibility = View.INVISIBLE
+//        }
+//
+//        tab2.setOnClickListener {
+//             content1.visibility = View.INVISIBLE;
+//             content2.visibility = View.VISIBLE
+//        }
     }
 }
 
