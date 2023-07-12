@@ -5,20 +5,26 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
 import android.view.KeyEvent
+import android.view.MotionEvent
 import android.view.View
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.widget.*
 import androidx.core.content.ContextCompat
 
 class MainActivity : AppCompatActivity() {
-
+    lateinit var resultView: TextView;
     var initTime = 0L //3초 이내 백버튼을 두번 누르면 종료하기 위해
 
 
 
+
      override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+
+        resultView = findViewById(R.id.resultView);
 
 //        val tab1 = findViewById<Button>(R.id.tab1);
 //        val tab2 = findViewById<Button>(R.id.tab2);
@@ -45,6 +51,18 @@ class MainActivity : AppCompatActivity() {
             }
         }
         return super.onKeyDown(keyCode, event)
+    }
+
+    override fun onTouchEvent(event: MotionEvent?): Boolean {
+        var eventType = ""
+        when(event?.action){
+            MotionEvent.ACTION_DOWN -> eventType = "DOWN EVENT"
+            MotionEvent.ACTION_UP -> eventType = "UP EVENT"
+            MotionEvent.ACTION_MOVE -> eventType = "MOVE EVENT"
+        }
+
+        resultView.text ="$eventType : x - ${event?.x}, y - ${event?.y}"
+        return super.onTouchEvent(event)
     }
 }
 
