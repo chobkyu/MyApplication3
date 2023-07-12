@@ -1,70 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<GridLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity"
-    android:orientation="vertical"
-    android:padding="16dp">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-
-        <Button
-            android:id="@+id/tab1"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="TAB1"
-            />
-
-        <Button
-            android:id="@+id/tab2"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="TAB2"
-            />
-    </LinearLayout>
-
-  <FrameLayout
-      android:layout_width="match_parent"
-      android:layout_height="match_parent"
-      >
-
-      <TextView
-          android:id="@+id/content1"
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          android:text="Hello"
-          android:textSize="25dp"
-          android:textStyle="bold"
-          android:textColor="#FFFFFF"
-          android:background ="#FF0000"
-          android:gravity = "center"
-          />
-
-      <TextView
-          android:id="@+id/content2"
-          android:layout_width="match_parent"
-          android:layout_height="match_parent"
-          android:text="World!"
-          android:textSize="25dp"
-          android:textStyle="bold"
-          android:textColor="#FFFFFF"
-          android:background ="#FF0000"
-          android:gravity = "center"
-          android:visibility="invisible"
-          />
-
-  </FrameLayout>
+    android:orientation="horizontal"
+    android:columnCount = "4"
+    android:padding="16dp"
+    >
 
 
 
+    <Button
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:layout_margin="8dp"
+        android:text="C"
+        />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:layout_margin="8dp"
+        android:text="( )"
+        />
+    <Button
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:layout_margin="8dp"
+        android:text="%"
+        />
+    <Button
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:layout_margin="8dp"
+        android:text="/"
+        />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:layout_margin="8dp"
+        android:text="7"
+        />
+    <Button
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:layout_margin="8dp"
+        android:text="8"
+        />
+    <Button
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:layout_margin="8dp"
+        android:text="9"
+        />
+    <Button
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:layout_margin="8dp"
+        android:text="X"
+        />
+
+    <Button
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:layout_margin="8dp"
+        android:text="4"
+        />
+    <Button
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:layout_margin="8dp"
+        android:text="5"
+        />
+    <Button
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:layout_margin="8dp"
+        android:text="6"
+        />
+    <Button
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:layout_margin="8dp"
+        android:text="-"
+        />
+    <Button
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:layout_margin="8dp"
+        android:text="1"
+        />
+    <Button
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:layout_margin="8dp"
+        android:text="2"
+        />
+    <Button
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:layout_margin="8dp"
+        android:text="3"
+        />
+    <Button
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:layout_margin="8dp"
+        android:text="+"
+        />
+    <Button
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:layout_margin="8dp"
+        android:text="+/-"
+        />
+    <Button
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:layout_margin="8dp"
+        android:text="0"
+        />
+    <Button
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:layout_margin="8dp"
+        android:text="."
+        />
+    <Button
+        android:layout_width="0dp"
+        android:layout_columnWeight="1"
+        android:layout_margin="8dp"
+        android:text="="
+        />
 
 <!--    <TextView-->
 <!--        android:layout_width="wrap_content"-->
@@ -156,4 +226,4 @@
 <!--        android:layout_marginTop = "20dp"-->
 <!--        />-->
 
-</LinearLayout>
+</GridLayout>
