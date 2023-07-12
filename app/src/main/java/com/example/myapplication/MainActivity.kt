@@ -4,15 +4,17 @@ import android.graphics.Typeface
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Gravity
+import android.view.KeyEvent
 import android.view.View
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.TextView
+import android.widget.*
 import androidx.core.content.ContextCompat
 
 class MainActivity : AppCompatActivity() {
+
+    var initTime = 0L //3초 이내 백버튼을 두번 누르면 종료하기 위해
+
+
 
      override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,6 +33,18 @@ class MainActivity : AppCompatActivity() {
 //             content1.visibility = View.INVISIBLE;
 //             content2.visibility = View.VISIBLE
 //        }
+    }
+
+
+    override fun onKeyDown(keyCode: Int, event: KeyEvent?): Boolean {
+        if(keyCode === KeyEvent.KEYCODE_BACK){
+            if(System.currentTimeMillis() - initTime > 3000){
+                Toast.makeText(this, "종료하려면 한번 더 누르세요!!",Toast.LENGTH_SHORT).show();
+                initTime = System.currentTimeMillis();
+                return true;
+            }
+        }
+        return super.onKeyDown(keyCode, event)
     }
 }
 
