@@ -11,6 +11,7 @@ import android.view.View
 import android.view.ViewGroup.LayoutParams.WRAP_CONTENT
 import android.widget.*
 import androidx.core.content.ContextCompat
+import androidx.core.content.res.ResourcesCompat
 
 class MainActivity : AppCompatActivity() {
     lateinit var resultView: TextView;
@@ -26,8 +27,13 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        val textView = findViewById<TextView>(R.id.textView4);
 
-        resultView = findViewById(R.id.resultView);
+        textView.text = getString(R.string.txt_data2);
+        textView.setTextColor(ResourcesCompat.getColor(resources,R.color.txt_color,null));
+        textView.setTextSize(resources.getDimension((R.dimen.txt_size)))
+
+         resultView = findViewById(R.id.resultView);
 
         startButton = findViewById(R.id.startButton);
         stopButton = findViewById(R.id.stopButton);

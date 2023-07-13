@@ -17,4 +17,8 @@
         remote: Resolving deltas: 100% (4/4), completed with 4 local objects.
 
     </string>
+
+    <string name="txt_data1">Hello</string>
+    <string name="txt_data2">World</string>
+
 </resources>
