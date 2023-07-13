@@ -27,45 +27,45 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val textView = findViewById<TextView>(R.id.textView4);
-
-        textView.text = getString(R.string.txt_data2);
-        textView.setTextColor(ResourcesCompat.getColor(resources,R.color.txt_color,null));
-        textView.setTextSize(resources.getDimension((R.dimen.txt_size)))
-
-         resultView = findViewById(R.id.resultView);
-
-        startButton = findViewById(R.id.startButton);
-        stopButton = findViewById(R.id.stopButton);
-        resetButton = findViewById(R.id.resetButton);
-        chronometer = findViewById(R.id.chronometer);
-
-
-        startButton.setOnClickListener {
-            chronometer.base = SystemClock.elapsedRealtime() + pauseTime
-            chronometer.start();
-            stopButton.isEnabled = true;
-            resetButton.isEnabled = true;
-            startButton.isEnabled = false;
-        }
-
-        stopButton.setOnClickListener {
-            pauseTime = chronometer.base - SystemClock.elapsedRealtime()
-            chronometer.stop();
-            stopButton.isEnabled = false;
-            resetButton.isEnabled = true;
-            startButton.isEnabled = true;
-        }
-
-        resetButton.setOnClickListener {
-            pauseTime = 0L;
-            chronometer.base = SystemClock.elapsedRealtime();
-            chronometer.stop();
-
-            stopButton.isEnabled = false;
-            resetButton.isEnabled = false;
-            startButton.isEnabled = true;
-        }
+//        val textView = findViewById<TextView>(R.id.textView4);
+//
+//        textView.text = getString(R.string.txt_data2);
+//        textView.setTextColor(ResourcesCompat.getColor(resources,R.color.txt_color,null));
+//        textView.setTextSize(resources.getDimension((R.dimen.txt_size)))
+//
+//         resultView = findViewById(R.id.resultView);
+//
+//        startButton = findViewById(R.id.startButton);
+//        stopButton = findViewById(R.id.stopButton);
+//        resetButton = findViewById(R.id.resetButton);
+//        chronometer = findViewById(R.id.chronometer);
+//
+//
+//        startButton.setOnClickListener {
+//            chronometer.base = SystemClock.elapsedRealtime() + pauseTime
+//            chronometer.start();
+//            stopButton.isEnabled = true;
+//            resetButton.isEnabled = true;
+//            startButton.isEnabled = false;
+//        }
+//
+//        stopButton.setOnClickListener {
+//            pauseTime = chronometer.base - SystemClock.elapsedRealtime()
+//            chronometer.stop();
+//            stopButton.isEnabled = false;
+//            resetButton.isEnabled = true;
+//            startButton.isEnabled = true;
+//        }
+//
+//        resetButton.setOnClickListener {
+//            pauseTime = 0L;
+//            chronometer.base = SystemClock.elapsedRealtime();
+//            chronometer.stop();
+//
+//            stopButton.isEnabled = false;
+//            resetButton.isEnabled = false;
+//            startButton.isEnabled = true;
+//        }
 
 //        val tab1 = findViewById<Button>(R.id.tab1);
 //        val tab2 = findViewById<Button>(R.id.tab2);

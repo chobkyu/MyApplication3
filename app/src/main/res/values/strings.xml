@@ -20,5 +20,6 @@
 
     <string name="txt_data1">Hello</string>
     <string name="txt_data2">World</string>
+    <string name="data">Hello</string>
 
 </resources>
